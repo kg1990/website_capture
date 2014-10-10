@@ -11,6 +11,7 @@ source 'http://ruby.taobao.org'
 # gem 'oj'
 
 # Project requirements
+gem 'activesupport', :require => 'active_support'
 gem 'rake'
 gem 'unicorn'
 gem 'mongo_mapper'

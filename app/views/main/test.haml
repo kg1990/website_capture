@@ -1,0 +1,20 @@
+%input#url{:type => "text"}
+%input#capture{:type => "button", :value => "Capture"}
+%image#show_image{:src => ""}
+:javascript
+  $(function(){
+    $('#capture').click(function(){
+      url = $('#url').val();
+      fn = function(){
+        $.get('/api/capture?url=' + url, 
+        function(data){
+          if(data == ''){
+            setTimeout(fn ,200);
+          }else{
+            $('#show_image').attr("src", "data:image/png;base64," + data);
+          }
+        });
+      };
+      fn();
+    });
+  });

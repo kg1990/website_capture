@@ -1,0 +1,6 @@
+%span='current image counts=' + @url_captures.length.to_s
+%br
+-@url_captures.each do |e|
+  %span=e[:url]
+  %image{:src => "data:image/png;base64,#{e[:image_data]}"}
+  %br

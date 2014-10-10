@@ -8,3 +8,4 @@ production:
   :concurrency: 3
 :queues:
   - default
+  - [make_capture, 2]

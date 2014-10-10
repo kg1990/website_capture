@@ -1,4 +1,5 @@
-class App < Padrino::Application
+module Capture
+  class App < Padrino::Application
     register Padrino::Mailer
     register Padrino::Helpers
 
@@ -60,4 +61,5 @@ class App < Padrino::Application
     #     render 'errors/505'
     #   end
     #
+  end
 end

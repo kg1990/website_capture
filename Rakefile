@@ -33,7 +33,7 @@ namespace :unicorn do
   end
 
   def app_name
-    'youhaosuda_bbs'
+    'capture'
   end
 
   def unicorn_pid
